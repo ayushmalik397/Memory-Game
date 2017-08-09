@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Memory Game Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="game.css">
+    <script src="https://use.fontawesome.com/2f4b2c2754.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="game.js"></script>
+</head>
+
+<body>
+    <h1 class="head">FLIP AND MATCH</h1>
+    <div class="clock">
+        <div>Time: <span id="min">00</span>:<span id="sec">00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moves: <span id="moves">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="window.location.reload()"><span class="res">Reset</span></button>&nbsp;&nbsp;&nbsp;&nbsp;<span id="rate"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span></div>
+    </div>
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <div class="first"><br><br><br><br><img src="images/tick.png" height="100px" width="100px"><br>
+                <h2>Awesome!</h2><br><br></div>
+            <div class="info"><br>
+                <div class="info1">You took <span id="moves1"></span> moves and <span id="min1"></span>:<span id="sec1"></span> to complete the game</div>
+                <br><br>
+                <div class="rating">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rating: <span id="stars"></span></div><br><br>
+                <button type="button" class="btn btn-primary" onclick="window.location.reload()">Play Again</button><br></br>
+            </div>
+        </div>
+    </div>
+    <div id="area">
+    </div>
+    <script>
+        shufflePics(pics);
+        backpics();
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+</body>
+
+</html>
